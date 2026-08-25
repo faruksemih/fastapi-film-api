@@ -1,5 +1,10 @@
 # FastAPI Film API
 
+## Live Demo
+
+- [Swagger UI](https://fastapi-film-api.onrender.com/docs)
+- [ReDoc](https://fastapi-film-api.onrender.com/redoc)
+
 FastAPI kullanılarak geliştirilmiş; kullanıcı doğrulama, yetkilendirme ve ilişkisel veritabanı işlemleri içeren bir Film REST API projesidir.
 
 ## Özellikler
