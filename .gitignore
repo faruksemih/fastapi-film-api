@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Virtual environment and secrets
+.venv/
+.env
+.env.py
+
+# Tests, IDE and macOS
+.pytest_cache/
+.idea/
+.DS_Store
+
+# Local databases
+*.db
+
+# Eski deneme projeleri
+app/
+src/
+main.py
+env.py
