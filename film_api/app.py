@@ -1,14 +1,21 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
-from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
+from film_api.database import create_db_tables
 from film_api.routers.filmler import router as film_router
-from film_api.routers.yonetmenler import router as yonetmen_router
 from film_api.routers.kullanicilar import router as kullanici_router
+from film_api.routers.yonetmenler import router as yonetmen_router
 
-app = FastAPI(
-    title="Film API",
-    version="1.0.0"
-)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    create_db_tables()
+    yield
+
+
+app = FastAPI(lifespan=lifespan)
 
 izin_verilen_adresler = [
     "http://localhost:5173",
